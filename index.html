@@ -1,42 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <title> Regulated Financial Activities </title>
+  <title> Tech Interview Question 01 </title>
 </head>
 <body>
-  <p id="introduction" class="intro"> <b> Please select any of the following activites which you are conducting:  </b> </p>
-  <form id="form_action" class="form_action" action='#'>
+  <div id="question" class="question">
+ 
+  <b> QUESTION: </b>
+   
+   <p>As a Natural Language Processing (NLP) analyst, you are tasked by your supervisor to
+design a function which would take a list of string characters as input then output
+a bag-of-word dictionary. </p>
 
-    <input type="checkbox" id="type01" name="type01" value="Type 1">
-    <label for="type01"> Type 1:Dealing in securities </label><br>
+<p><u>Input:</u></p>
 
-    <input type="checkbox" id="type02" name="type02" value="Type 2">
-    <label for="type02"> Type 2:Dealing in futures contracts </label><br>
+<ul>
+<li> Your input data would always be a list of string characters </li> <br>
+<li> Your input data would not be an empty list </li> <br>
+<li> There might be scenarios where there are leading/ trailing spaces in your input
+ data, e.g. '   a' or 'b  '. However, your bag-of-word dictionary output would have these spaces removed. </li> <br>
+<li> There might be scenarios where your input data is having some uppercase character(s),
+ e.g. 'Apple' or 'baNaNa'.
+ However, your bag-of-word dictionary output should only consist of all lowercase characters. </li> <br>
+<li> There would not exist any non-word characters, e.g. '!','@'  </li> <br>
+<li> The maximum length of the input list would be capped at 10,000 </li> <br>
+</ul>
 
-    <input type="checkbox" id="type03" name="type03" value="Type 3">
-    <label for="type03"> Type 3: Leveraged foreign exchange trading </label><br>
+<p><u>Example 01: </u></p>
 
-    <input type="checkbox" id="type04" name="type04" value="Type 4">
-    <label for="type04"> Type 4: Advising on securities </label><br>
+<p>Given an input data of [ ' a' , 'b ' , 'Apple' , 'baNaNa' , 'orange' , 'orange' ],
+your output should be:</p>
 
-    <input type="checkbox" id="type05" name="type05" value="Type 5">
-    <label for="type05"> Type 5: Advising on futures contracts </label><br>
+<p>Python=>  {'a': 1, 'b': 1, 'apple': 1, 'banana': 1, 'orange': 2}</p>
 
-    <input type="checkbox" id="type06" name="type06" value="Type 6">
-    <label for="type06"> Type 6: Advising on corporate finance </label><br>
+<p>Javascript=> {a: 1, b: 1, apple: 1, banana: 1, orange: 2}</p>
 
-    <input type="checkbox" id="type07" name="type07" value="Type 7" checked=True>
-    <label for="type07"> Type 7: Providing automated trading services </label><br>
+<p>R=> <br>
+<table>
+<tr>
+<td>a</td>
+<td>b</td>
+<td>apple</td>
+<td>banana</td>
+<td>orange</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</table>
+</p>
 
-    <input type="checkbox" id="type08" name="type08" value="Type 8" checked=True>
-    <label for="type08"> Type 8: Securities margin financing </label><br>
+<p><u>Example 02: </u></p>
 
-    <input type="checkbox" id="type09" name="type09" value="Type 9" checked=True>
-    <label for="type09"> Type 9: Asset management </label><br>
+<p>Given an input data of [ 'Invoice' , 'receipt   ' , 'fund' , 'Accounts' , 'account' , '   receipt' ],
+your output should be:</p>
 
-    <input type="checkbox" id="type10" name="type10" value="Type 10">
-    <label for="type10"> Type 10: Providing credit rating services </label><br>
+<p>Python=>  {'invoice': 1, 'receipt': 2, 'fund': 1, 'accounts': 1, 'account': 1}</p>
 
-  </form>
+<p>Javascript=> {invoice: 1, receipt: 2, fund: 1, accounts: 1, account: 1}</p>
+
+<p>R=> <br>
+<table>
+<tr>
+<td>invoice</td>
+<td>receipt</td>
+<td>fund</td>
+<td>accounts</td>
+<td>account</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</table>
+</p>
+
+<hr>
+<p> You could choose to work out your solution with either Python, Javascript or R with the attached online compilers. </p>
+
+    <div id="python">
+<p><b>Python- <a href="https://www.programiz.com/python-programming/online-compiler/" target="blank"> Online Python Compiler </a></b></p>
+
+<code>
+def solution(x):<br>
+ 
+ 
+&nbsp; return answer <br><br>
+
+test= [' a','b ','Apple','baNaNa','orange','orange'] <br>
+print(solution(test))<br>
+</code>
+
+
+</div>
+
+<hr>
+
+<div id="javascript">
+<p><b>Javascript- <a href="https://playcode.io/new/" target="blank"> Online Javascript Compiler </a></b></p>
+
+<code>
+function solution(x){<br>
+
+
+&nbsp; return answer;<br>
+
+}<br><br>
+
+test= [' a','b ','Apple','baNaNa','orange','orange'] <br>
+console.log(solution(test))<br>
+</code>
+
+</div>
+
+<hr>
+
+<div id="r">
+<p><b>R- <a href="https://www.tutorialspoint.com/execute_r_online.php" target="blank"> Online R Compiler </a></b></p>
+
+<code>
+solution<- function(x){<br>
+
+
+&nbsp; return(answer)<br>
+
+}<br><br>
+
+test<- c(' a','b ','Apple','baNaNa','orange','orange') <br>
+print(solution(x))<br>
+</code>
+
+</div>
+ 
+  </div>
 </body>
 </html>
