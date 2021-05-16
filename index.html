@@ -1,144 +1,79 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <title> Tech Interview Question 01 </title>
+  <title> Tech Interview Question 02 </title>
 </head>
 <body>
   <div id="question" class="question">
- 
+  
   <b> QUESTION: </b>
-   
-   <p>As a Natural Language Processing (NLP) analyst, you are tasked by your supervisor to
-design a function which would take a list of string variables as input then output
-a bag-of-word dictionary. </p>
+    
+   <p>As a Natural Language Processing (NLP) analyst, you are tasked by your supervisor to 
+	design a function which would take a list of string characters as input then output 
+	the first initial of every word related to the given input. </p>
+   <p>E.g. &nbsp; 'ABC Inc' -> 'A' &nbsp;  and &nbsp; 'strawberry icecream' -> 's' </p>
 
-<p><u>Input:</u></p>
+	<p><u>Input:</u></p>
+	
+	<ul>
+	<li> Your input data would always be a list of string characters </li> <br>
+	<li> Your input data would not be an empty list </li> <br>
+	<li> There would not be any scenarios where there are leading/ trailing spaces in your input 
+	  data, e.g. '   a' or 'b  ' are non-existent.</li> <br>
+	<li> There would not exist any non-word characters, e.g. '!','@'  </li> <br>
+	<li> The maximum length of the input list would be capped at 10,000 </li> <br>
+	</ul>
+	
+	<p><u>Example 01: </u></p>
+	
+	<p>Given an input data of ['ABC Inc', 'strawberry icecream', 'paint Brush', 'Bull run'], 
+	your output should be:</p>
+		
+	<p>Python=>  ['A', 's', 'p', 'B']</p>
 
-<ul>
-<li> Your input data would always be a list of string variables </li> <br>
-<li> Your input data would not be an empty list </li> <br>
-<li> There might be scenarios where there are leading/ trailing spaces in your input
- data, e.g. '   a' or 'b  '. However, your bag-of-word dictionary output would have these spaces removed. </li> <br>
-<li> There might be scenarios where your input data is having some uppercase character(s),
- e.g. 'Apple' or 'baNaNa'.
- However, your bag-of-word dictionary output should only consist of all lowercase characters. </li> <br>
-<li> There would not exist any non-word characters, e.g. '!','@'  </li> <br>
-<li> The maximum length of the input list would be capped at 10,000 </li> <br>
-</ul>
+	<p>Javascript=> ["A", "s", "p", "B"]</p>
 
-<p><u>Example 01: </u></p>
-
-<p>Given an input data of [ ' a' , 'b ' , 'Apple' , 'baNaNa' , 'orange' , 'orange' ],
-your output should be:</p>
-
-<p>Python=>  {'a': 1, 'b': 1, 'apple': 1, 'banana': 1, 'orange': 2}</p>
-
-<p>Javascript=> {a: 1, b: 1, apple: 1, banana: 1, orange: 2}</p>
-
-<p>R=> <br>
-<table>
-<tr>
-<td>a</td>
-<td>b</td>
-<td>apple</td>
-<td>banana</td>
-<td>orange</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>2</td>
-</tr>
-</table>
-</p>
-
-<p><u>Example 02: </u></p>
-
-<p>Given an input data of [ 'Invoice' , 'receipt   ' , 'fund' , 'Accounts' , 'account' , '   receipt' ],
-your output should be:</p>
-
-<p>Python=>  {'invoice': 1, 'receipt': 2, 'fund': 1, 'accounts': 1, 'account': 1}</p>
-
-<p>Javascript=> {invoice: 1, receipt: 2, fund: 1, accounts: 1, account: 1}</p>
-
-<p>R=> <br>
-<table>
-<tr>
-<td>invoice</td>
-<td>receipt</td>
-<td>fund</td>
-<td>accounts</td>
-<td>account</td>
-</tr>
-<tr>
-<td>1</td>
-<td>2</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-</table>
-</p>
-
-<hr>
-<p> You could choose to work out your solution with either Python, Javascript or R with the attached online compilers. </p>
-
+	<hr>
+	<p> You could choose to work out your solution with either Python or Javascript with the attached online compilers. </p>
+	
     <div id="python">
-<p><b>Python- <a href="https://www.programiz.com/python-programming/online-compiler/" target="blank"> Online Python Compiler </a></b></p>
+		<p><b>Python- <a href="https://www.programiz.com/python-programming/online-compiler/" target="blank"> Online Python Compiler </a></b></p>
+		
+		<code>
+			def solution(x):<br>
+  
+			&nbsp; #WRITE YOUR CODE HERE <br>
+  
+			&nbsp; return answer <br><br>
 
-<code>
-def solution(x):<br>
- 
- 
-&nbsp; return answer <br><br>
+			test= ['ABC Inc', 'strawberry icecream', 'paint Brush', 'Bull run'] <br>
+			print(solution(test))<br>
+		</code>
+			
+	
+	</div>
+	
+	<hr>
+	
+	<div id="javascript">
+	<p><b>Javascript- <a href="https://playcode.io/new/" target="blank"> Online Javascript Compiler </a></b></p>
+	
+		<code>
+			function solution(x){<br>
 
-test= [' a','b ','Apple','baNaNa','orange','orange'] <br>
-print(solution(test))<br>
-</code>
+			&nbsp; /*WRITE YOUR CODE HERE*/ <br>
 
+			&nbsp; return answer;<br>
+			
+			}<br><br>
 
-</div>
-
-<hr>
-
-<div id="javascript">
-<p><b>Javascript- <a href="https://playcode.io/new/" target="blank"> Online Javascript Compiler </a></b></p>
-
-<code>
-function solution(x){<br>
-
-
-&nbsp; return answer;<br>
-
-}<br><br>
-
-test= [' a','b ','Apple','baNaNa','orange','orange'] <br>
-console.log(solution(test))<br>
-</code>
-
-</div>
-
-<hr>
-
-<div id="r">
-<p><b>R- <a href="https://www.tutorialspoint.com/execute_r_online.php" target="blank"> Online R Compiler </a></b></p>
-
-<code>
-solution<- function(x){<br>
-
-
-&nbsp; return(answer)<br>
-
-}<br><br>
-
-test<- c(' a','b ','Apple','baNaNa','orange','orange') <br>
-print(solution(x))<br>
-</code>
-
-</div>
- 
+			var test= ['ABC Inc', 'strawberry icecream', 'paint Brush', 'Bull run'] <br>
+			console.log(solution(test))<br>
+		</code>			
+	
+	</div>
+	
+  
   </div>
 </body>
 </html>
